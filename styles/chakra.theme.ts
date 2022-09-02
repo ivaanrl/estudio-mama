@@ -20,9 +20,14 @@ const buttonTheme = {
     colorScheme: "brand",
   },
 };
+const config = {
+  initialColorMode: "light",
+  useSystemColorMode: false,
+};
 
 export const theme = extendTheme({
   colors,
+  config,
   components: {
     Button: { ...buttonTheme },
   },
