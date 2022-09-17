@@ -3,11 +3,11 @@ import { Box, chakra } from "@chakra-ui/react";
 import { ChakraBox } from "./framerMotionElements";
 
 interface Props {
-  translateX: MotionValue<number>;
-  translateY: MotionValue<number>;
+  //translateX: MotionValue<number>;
+  //translateY: MotionValue<number>;
 }
 
-const Background = ({ translateX, translateY }: Props) => {
+const Background = ({}: Props) => {
   return (
     <Box
       position="fixed"
@@ -29,10 +29,10 @@ const Background = ({ translateX, translateY }: Props) => {
         opacity="0.25"
         borderTopRightRadius="10px"
         borderBottomRightRadius="10px"
-        style={{
-          translateX,
-          translateY,
-        }}
+        // style={{
+        //   translateX,
+        //   translateY,
+        // }}
       />
       <ChakraBox
         position="absolute"
@@ -44,10 +44,10 @@ const Background = ({ translateX, translateY }: Props) => {
         // opacity="0.50"
         borderTopLeftRadius="10px"
         borderBottomLeftRadius="10px"
-        style={{
-          translateX,
-          translateY,
-        }}
+        // style={{
+        //   translateX,
+        //   translateY,
+        // }}
       />
       {/* <svg
         xmlns="http://www.w3.org/2000/svg"
