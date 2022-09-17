@@ -2,6 +2,7 @@ import { Title } from "../../common/title";
 import { useForm } from "react-hook-form";
 import { Input } from "../../common/input";
 import { Box, Button } from "@chakra-ui/react";
+import { WhastappButton } from "../../common/whatsappButton";
 export const ContactUs = () => {
   const {
     handleSubmit,
@@ -50,6 +51,7 @@ export const ContactUs = () => {
           Enviar
         </Button>
       </form>
+      <WhastappButton />
     </Box>
   );
 };
