@@ -1,9 +1,8 @@
 import Image from "next/image";
-import { useAnimation, useCycle, useViewportScroll } from "framer-motion";
+import { useCycle } from "framer-motion";
 import useMeasure from "react-use-measure";
 import { MenuToggle } from "./menuToggle";
 import { Navigation } from "./navigation";
-import { useEffect } from "react";
 import useWindowDimensions from "../../../customHooks/useWindowsDimentions";
 import { Box } from "@chakra-ui/react";
 import { ChakraBox, ChakraNav } from "../framerMotionElements";
@@ -13,7 +12,6 @@ interface Props {}
 const megaMenuVariants = {
   open: (height = 500) => ({
     clipPath: `circle(${height * 2 + 400}px at 87% 50px)`,
-    // background: 'rgba(255,255,255,1)',
     opacity: 1,
     transition: {
       type: "spring",
@@ -23,7 +21,6 @@ const megaMenuVariants = {
   }),
   closed: {
     clipPath: "circle(1px at 87% 50px)",
-    //background: 'rgba(255,255,255,1)',
     opacity: 0,
     transition: {
       delay: 0.1,
@@ -37,8 +34,7 @@ const megaMenuVariants = {
 const menuBackgroundVariants = {
   open: {
     opacity: 1,
-    display: "block",
-    translateX: "0px",
+    x: 0,
     transition: {
       bounce: 0,
       duration: 0.5,
@@ -46,8 +42,7 @@ const menuBackgroundVariants = {
   },
   closed: {
     opacity: 1,
-    display: "none",
-    translateX: "500px",
+    x: 500,
     transition: {
       bounce: 0,
       duration: 0.5,

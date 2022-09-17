@@ -34,11 +34,9 @@ export const Navigation = ({ hideSidebar }: Props) => {
 
   const variants = {
     open: {
-      //height: '100vh',
       transition: { staggerChildren: 0.07, delayChildren: 0.2 },
     },
     closed: {
-      //height: 0,
       transition: { staggerChildren: 0.05, staggerDirection: -1 },
     },
   };
